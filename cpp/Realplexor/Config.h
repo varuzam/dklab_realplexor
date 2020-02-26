@@ -82,7 +82,7 @@ public:
         // Reset config.
         config.clear();
         // Read default config.
-        _load_config_file(get_root_dir() + "/dklab_realplexor.conf");
+        _load_config_file("/etc/dklab_realplexor.conf");
         // Read custom config.
         if (add.length()) {
             if (is_file(add)) {

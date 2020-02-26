@@ -1,0 +1,16 @@
+[Unit]
+Description=Dklab Realplexor Comet Server
+After=network.target
+
+[Service]
+User=nobody
+Restart=always
+RestartSec=10
+Environment=PERL5LIB=/usr/lib/realplexor
+ExecStart=dklab_realplexor /etc/dklab_realplexor.conf -p /tmp/dklab_realplexor.pid
+ExecReload=/bin/kill -HUP $MAINPID
+
+LimitNOFILE=20000
+
+[Install]
+WantedBy=multi-user.target
