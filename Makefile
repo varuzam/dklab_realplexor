@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-std=gnu++0x -static -O2 -Wfatal-errors -Werror -pthread
+CFLAGS=-std=gnu++0x -static -O3 -Wfatal-errors -Werror -pthread
 LDFLAGS=-lcrypt -lboost_filesystem -lboost_system -lboost_regex -lev
 
 all:	build
